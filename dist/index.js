@@ -1730,7 +1730,7 @@ app.use((req, res, next) => {
   } else {
     serveStatic(app);
   }
-  const port = 5020;
+  const port = process.env.PORT || 5e3;
   server.listen(port, "0.0.0.0", () => {
     console.log(`Database Designer server listening on port ${port}`);
   });
